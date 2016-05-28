@@ -4,10 +4,10 @@
 # Commands:
 #   None
 
-backlogUrl = 'https://your.backlog.jp/'
+backlogUrl = 'https://hottolink.backlog.jp/'
 
 module.exports = (robot) ->
-  robot.router.post "/<任意のパス>/:room", (req, res) ->
+  robot.router.post "/tmp/:room", (req, res) ->
     { room } = req.params
     { body } = req
     try
