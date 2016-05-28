@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+npm install
+
+export PORT="8081"
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+export HUBOT_SLACK_TOKEN="xoxb-46515182336-MOp6h2ch2cLqitnIspF4qxCa"
+
+forever start -c coffee ../node_modules/.bin/hubot --name "supportbot" --adapter slack
